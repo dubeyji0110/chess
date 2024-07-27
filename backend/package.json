@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "start": "yarn build && node dist/index",
+    "dev": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")"
+  },
+  "dependencies": {
+    "chess.js": "^1.0.0-beta.8",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.11",
+    "tsc-alias": "^1.8.10"
+  },
+  "_moduleAliases": {
+    "@/*": "./dist/*"
+  }
+}
