@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-const WS_URL = process.env.BACKEND_URL ?? 'ws://localhost:8080';
+const WS_URL = process.env.NEXT_PUBLIC_BACKEND_URL ?? 'ws://localhost:8080';
 
 const useSocket = () => {
   const [socket, setSocket] = useState<WebSocket | null>(null);
